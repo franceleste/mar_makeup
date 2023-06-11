@@ -1,0 +1,135 @@
+* { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+header { background-color: pink; padding: 12px 18px; display: flex; flex-direction: row; justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.general { list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.general > li { padding: 0px 12px; 
+    justify-content: center; 
+    display: inline-block;
+}
+
+.general > li > a { color: black; 
+    text-decoration: none; 
+    padding: 5px 20px; 
+    font-size: 17px; 
+    display: block;
+}
+
+.general li a:hover, header ul li a#activo:hover { border-bottom: 2px solid black; }
+
+.general li a#activo { border-bottom: 1px solid black; }
+
+.subgeneral { position: absolute; 
+    background-color: black; 
+    list-style-type: none; 
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+}  
+
+.subgeneral li a { display: block; 
+    padding: 15px; 
+    color: #fff; 
+    font-family: 'Open sans'; 
+    text-decoration: none; 
+}
+
+.general li:hover .subgeneral { visibility: visible; opacity: 1;}
+
+header img { width: 50px; }
+
+body { background-color: rgb(241, 225, 219); }
+
+#productosdestacados { margin: 30px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.contenedor-productos { 
+    display:flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    height: 1000px; 
+    list-style-type: none;
+}
+
+.contenedor-productos a {
+    color: black ; 
+    text-decoration: none;
+}
+
+.card { width: 400px; 
+    height: 400px; 
+    background-color: lightblue; 
+    margin: 12px; 
+    border-radius: 10px; 
+}
+
+.card-1 { order: 1; }
+
+.card-2 { order: 2; }
+
+.card-3 { order: 3; }
+
+.card img { width: 100%; 
+    height: 100%; 
+    margin: 12px; 
+    border-radius: 10px; }
+
+.card .caption { background-color: white; 
+    border-radius: 3%; 
+    display: flex;
+    flex-direction: column;}
+
+
+
+.card .caption h2 { text-align: center; font-weight: bold; list-style-type: none; color: red;}
+
+.card .caption h3 { text-align: center; font-weight: normal; list-style-type: none;  }
+
+#footer { background: #ccc; padding: 10px; display: flex; flex-direction: row; justify-content: center; align-items: end;}
+#footer p { color: #555; font-size: 12px; }
+#footer img { position: absolute; right: 5px; justify-content: end; margin: 8px }
+ 
+@media (max-width:1168px) and (min-width:0) {
+    .contenedor-productos {
+       align-items: left;
+       display: block;
+       margin: 10px;
+    }
+    .contenedor-productos a {
+        color: black ; 
+        text-decoration: none;
+    }
+    
+    .card { width: 400px; 
+        height: 400px; 
+        background-color: transparent; 
+        margin-top: 10%; 
+        border-radius: none; 
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+    .card .caption { background-color: white;
+        width: 400px;
+        border-radius: 10%; 
+        display: block;
+        flex-direction: row;
+        float:left;
+        margin-right: 10px;
+        justify-content: center;
+    }  
+}
